@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">e-Attandance</string>
+    <string name="instructions">
+    masukan sidik jari anda di sensor sidik jari HP anda
+    </string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_history">History</string>
+    <string name="title_absen">Absen</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

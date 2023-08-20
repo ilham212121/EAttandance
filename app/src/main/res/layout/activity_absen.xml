@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.absen.Absen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:gravity="top|center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@mipmap/icon_ambil_foto" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/btn_logout"
+            android:fontFamily="@font/popins"
+            android:text="Ambil Foto" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Absen hadir / Pulang Sesuai Jadwal Shift !!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/radar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btn_kirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_logout"
+            android:fontFamily="@font/popins"
+            android:text="kirim" />
+    </LinearLayout>
+
+</RelativeLayout>

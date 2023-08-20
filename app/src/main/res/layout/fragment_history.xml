@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ui.history.HistoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/popins"
+            android:gravity="center"
+            android:text="History Absen"
+            android:textColor="@color/greendark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/search_date"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:iconifiedByDefault="false"
+            android:padding="4dp"
+            android:queryHint="Search History" />
+        <EditText
+            android:id="@+id/search_status"
+            android:inputType="textFilter|text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:iconifiedByDefault="false"
+            android:padding="4dp"
+            android:queryHint="Search History" />
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cari"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/list_hist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_history">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="100sp"
+                    android:paddingStart="8sp"
+                    android:paddingEnd="8sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:fontFamily="@font/popins"
+                        android:paddingTop="5dp"
+                        android:text="Tanggal"
+                        android:textColor="@color/greendark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="30dp"
+                        android:fontFamily="@font/popins"
+                        android:paddingTop="5dp"
+                        android:text="Waktu"
+                        android:textColor="@color/greendark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/popins"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="Status"
+                        android:textColor="@color/greendark" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleviewhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="history pulang"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/list_hist">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="8sp"
+                android:gravity="center"
+                android:paddingEnd="8sp">
+
+                <TextView
+                    android:id="@+id/historyAbsen"
+                    android:clickable="true"
+                    android:fontFamily="@font/popins"
+                    android:background="@drawable/btn_switch"
+                    android:layout_width="150dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp"
+                    android:text="history absen"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12dp"
+
+                    />
+                <TextView
+                    android:id="@+id/historypulang"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="150dp"
+                    android:textColor="@color/black"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/popins"
+                    android:text="history pulang"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>
